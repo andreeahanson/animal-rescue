@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.product-collection {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1px;
+}
+
+* {
+  font: Helvetica medium;
+}
+
