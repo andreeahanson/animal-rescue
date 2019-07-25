@@ -4,3 +4,4 @@
 # beauty-room
 # beautyroom
 # b-r
+# beauty-studio
