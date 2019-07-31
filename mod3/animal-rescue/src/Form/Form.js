@@ -28,7 +28,7 @@ class Form extends Component {
     const newDonation = {
       id: Date.now(),
       name: this.state.nameInput,
-      donation: this.state.donationInput,
+      donation: parseInt(this.state.donationInput),
     }
     await this.props.processDonation(newDonation);
     this.clearInputs();
