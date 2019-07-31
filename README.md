@@ -19,5 +19,5 @@ Then, go to http://localhost:3000/ in your browser to see the code running in th
 
 ## Backend installation
 
-Set Up
+### Set Up
 Clone down this repo: https://github.com/turingschool-examples/animal-rescue-api.git. Install the dependencies, and start the server. It should be running on localhost:3001
