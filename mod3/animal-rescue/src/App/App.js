@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchAnimals, fetchDonations } from '../apiCalls'
+import { fetchAnimals, fetchDonations, createDonation } from '../apiCalls'
 import { connect } from 'react-redux';
 import { loadAnimals, Loading, hasErrored, loadDonations } from  '../actions';
 import CardField from '../CardField/CardField';
@@ -28,10 +28,17 @@ class App extends Component{
     }
   }
 
+  processDonation = async (newDonation) => {
+    await createDonation(newDonation);
+    await console.log(newDonation)
+    const donations = await fetchDonations();
+    this.props.loadDonations(donations);
+  }
+
   render(){
     return(
       <main>
-        <Form />
+        <Form processDonation={this.processDonation}/>
           <h2>Animals: </h2>
         <section className="card-field">
           {this.props.isLoading && <h1>isLoading</h1>}

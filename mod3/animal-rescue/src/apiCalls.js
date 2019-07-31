@@ -25,3 +25,24 @@ export const fetchDonations = async () => {
     throw new Error(error.message)
   }
 }
+
+export const createDonation = async (newDonation) => {
+  const url = 'http://localhost:3001/api/v1/donations/';
+  const options = {
+    method: 'POST',
+    headers: {
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify({...newDonation})
+  }
+  try {
+    const response = await fetch(url, options)
+    if(!response.ok){
+      throw new Error("Sorry. Unable to create donation")
+    }
+    const newDonation = await response.json()
+    return newDonation;
+  } catch (error) {
+    throw new Error(error.message)
+  }
+}

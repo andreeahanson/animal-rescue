@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { loadDonations, addDonation } from '../actions';
 
 class Form extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       nameInput: '',
       donationInput: ''
@@ -23,14 +23,14 @@ class Form extends Component {
     })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
     const newDonation = {
       id: Date.now(),
       name: this.state.nameInput,
       donation: this.state.donationInput,
     }
-    this.props.addDonation(newDonation);
+    await this.props.processDonation(newDonation);
     this.clearInputs();
   }
 
