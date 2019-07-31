@@ -3,7 +3,7 @@ export const loadAnimals = animals => ({
   animals
 })
 
-export const isLoading = isLoading => ({
+export const Loading = isLoading => ({
   type: "IS_LOADING",
   isLoading
 })
