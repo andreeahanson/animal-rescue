@@ -7,6 +7,7 @@ const DonationField = ({donations}) => {
   const allDonations = donations.map(donation => {
     return (
       <DonationCard 
+      key={Math.random()}
       name={donation.name}
       donation={donation.donation}
       />

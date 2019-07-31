@@ -18,8 +18,6 @@ class App extends Component{
     try{
       const animals = await fetchAnimals();
       const donations = await fetchDonations();
-      await console.log(animals)
-      await console.log('DONATIONS', donations)
       this.props.Loading(false);
       this.props.loadAnimals(animals);
       this.props.loadDonations(donations);
@@ -30,7 +28,6 @@ class App extends Component{
 
   processDonation = async (newDonation) => {
     await createDonation(newDonation);
-    await console.log(newDonation)
     const donations = await fetchDonations();
     this.props.loadDonations(donations);
   }

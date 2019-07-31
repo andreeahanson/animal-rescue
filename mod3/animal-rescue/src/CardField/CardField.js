@@ -7,6 +7,8 @@ const CardField = ({animals}) => {
   const allAnimals = animals.map(animal => {
     return (
       <Card 
+      key={Math.random()}
+      id={animal.id}
       img={animal.img}
       name={animal.name}
       species={animal.species}
