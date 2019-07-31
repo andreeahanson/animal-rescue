@@ -21,5 +21,3 @@ Then, go to http://localhost:3000/ in your browser to see the code running in th
 
 Set Up
 Clone down this repo: https://github.com/turingschool-examples/animal-rescue-api.git. Install the dependencies, and start the server. It should be running on localhost:3001
-
-In a new directory, create a brand new frontend for this project using create-react-app. Make sure it is running on localhost:3000.
