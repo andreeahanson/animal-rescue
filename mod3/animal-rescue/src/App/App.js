@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { loadAnimals, Loading, hasErrored, loadDonations } from  '../actions';
 import CardField from '../CardField/CardField';
 import DonationField from '../DonationField/DonationField';
+import Form from '../Form/Form';
 
 class App extends Component{ 
   constructor() {
@@ -29,7 +30,8 @@ class App extends Component{
 
   render(){
     return(
-      <div>
+      <main>
+        <Form />
           <h2>Animals: </h2>
         <section className="card-field">
           {this.props.isLoading && <h1>isLoading</h1>}
@@ -39,7 +41,7 @@ class App extends Component{
         <section className="donation-field">
           <DonationField />
         </section>
-      </div>
+      </main>
     )
   }
 }
