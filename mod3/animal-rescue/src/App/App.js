@@ -35,16 +35,19 @@ class App extends Component{
   render(){
     return(
       <main>
+        <h1>Welcome to Animal Rescue!</h1>
         <Form processDonation={this.processDonation}/>
           <h2>Animals: </h2>
-        <section className="card-field">
-          {this.props.isLoading && <h1>isLoading</h1>}
-          <CardField />
-        </section>
+        <div className="cards-and-donations">
+          <section className="card-field">
+            {this.props.isLoading && <h1>isLoading</h1>}
+            <CardField />
+          </section>
+          <section className="donation-field">
           <h2>Donations:</h2>
-        <section className="donation-field">
-          <DonationField />
-        </section>
+            <DonationField />
+          </section>
+        </div>
       </main>
     )
   }

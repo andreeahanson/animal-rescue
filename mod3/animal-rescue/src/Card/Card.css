@@ -1,8 +1,11 @@
 img {
-  height: 250px;
+  height: 200px;
   width: 250px;
 }
 
 article {
-  border: 1px solid black
+  border: 1px solid white;
+  width: 250px;
+  margin: 10px;
+  background: white;  
 }

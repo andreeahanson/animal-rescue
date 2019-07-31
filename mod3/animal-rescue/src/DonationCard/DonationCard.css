@@ -1,6 +1,8 @@
 .donation {
   border: 1px solid black;
-  margin: 4px;
-  width: 200px;
+  margin: 3px;
+  margin-left: 10px;
+  width: 300px;
   height: 70px;
+  background: white;
 }

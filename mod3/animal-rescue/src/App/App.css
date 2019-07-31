@@ -2,8 +2,24 @@
   text-align: center;
 }
 
+main{
+  background: rgb(121, 175, 40);
+}
+
+h1 {
+  margin: 0px;
+}
+
 .card-field {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  border-right: 1px solid black;
+}
+
+.cards-and-donations{
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }

@@ -37,6 +37,7 @@ class Form extends Component {
   render() {
     return(
       <form>
+        <label forHTML="donation">Add your donation here: </label>
         <input 
         type="text"
         placeholder="donor name"
