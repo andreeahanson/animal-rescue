@@ -17,3 +17,8 @@ export const loadDonations = donations => ({
   type: "LOAD_DONATIONS",
   donations
 })
+
+export const addDonation = newDonation => ({
+  type: "ADD_DONATION",
+  newDonation
+})
